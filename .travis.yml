@@ -1,0 +1,9 @@
+sudo: required
+services: 
+ -docker
+
+before_install:
+ - docker build -t tdevm/docker_react -f Dockerfile.env 
+
+script:
+ - docker run tdevm.docker_react npm run test -- --coverage 
