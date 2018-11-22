@@ -6,4 +6,4 @@ before_install:
  - docker build -t tdevm/docker_react -f Dockerfile.dev . 
 
 script:
- - docker run tdevm.docker_react npm run test -- --coverage 
+ - docker run tdevm/docker_react npm run test -- --coverage 
